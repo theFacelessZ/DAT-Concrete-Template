@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btDatSection">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="Title" type="X2"></field>
+		<field name="Mentor" type="X2"></field>
+		<field name="MasterPhotoUri" type="X2"></field>
+		<field name="Description" type="X2"></field>
+
+		<field name="masterPhotoFID" type="I"><UNSIGNED /><default value="0" /></field>
+
+		<field name="useAboutField" type="L"></field>
+		<field name="aboutTitle" type="X2"></field>
+		<field name="aboutText" type="X2"></field>
+		<field name="StaffButton" type="X"></field>
+
+		<field name="socialVK" type="X"></field>
+	</table>
+	<table name="btDatSectionMedia">
+		<field name="id" type="I"><UNSIGNED/><key/><AUTOINCREMENT/></field>
+        <field name="bID" type="I"><UNSIGNED /></field>
+
+		<!--<field name="cID" type="I"><UNSIGNED /><default value="0" /></field>-->
+        <field name="fID" type="I"><UNSIGNED /><default value="0" /></field>
+
+		<field name="isVideo" type="L"/>
+		<field name="ytLink" type="X2"/>
+
+		<field name="linkURL"  type="C" size="255"/>
+		<field name="internalLinkCID"  type="I">
+			<unsigned />
+			<default value="0" />
+		</field>
+	</table>
+	<table name="btDatSectionSchedule">
+		<field name="id" type="I"><UNSIGNED/> <key/> <AUTOINCREMENT/></field>
+		<field name="bID" type="I"><UNSIGNED/></field>
+
+		<field name="SchDay" type="I"><UNSIGNED/></field>
+
+		<field name="SchTStart" type="T"></field>
+		<field name="SchTEnd" type="T"></field>
+
+		<field name="SchTitle" type="X2"></field>
+		<field name="SchDescription" type="X2"></field>
+	</table>
+	<table name="btDatSectionStaff">
+		<field name="id" type="I"><UNSIGNED/><key/><AUTOINCREMENT/></field>
+		<field name="bID" type="I"><UNSIGNED/></field>
+
+		<field name="photoFID" type="I"><UNSIGNED/><default value="0"/></field>
+		<field name="MemberName" type="X2"></field>
+		<field name="MemberDescription" type="X2"></field>
+	</table>
+</schema>

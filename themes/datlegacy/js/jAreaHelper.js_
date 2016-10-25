@@ -1,0 +1,21 @@
+jAreaHelper = {
+    isOverObj: function(obj) {
+        var a;
+
+        a = event.pageX > $(obj).offset().left;
+        a &= event.pageX < $(obj).offset().left + $(obj).outerWidth();
+
+        a &= event.pageY > $(obj).offset().top;
+        a &= event.pageY < $(obj).offset().top + $(obj).outerHeight();
+
+        return a;
+    },
+    editMode: function(rootAreaId) {
+        var _r = $('#a' + rootAreaId).parents('*[id^=a][data-area-id]');
+        var areaContainer = _r.parent();
+
+        _r.find('*[id^=a]').each(function() {
+            $(this).appendTo(areaContainer);
+        });
+    }
+};

@@ -1,0 +1,13 @@
+
+.social-vk {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    
+    background-image: url(../images/social/vk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #4c75a3;
+}

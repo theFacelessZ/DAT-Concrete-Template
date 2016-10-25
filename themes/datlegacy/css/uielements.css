@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+/*
+
+UI ELEMENTS
+
+*/
+
+div.button {
+    display: inline-block;
+    position: relative;
+    /*margin: 30px auto;*/
+    margin: 0 5px;
+    padding: 15px;
+    
+    vertical-align: middle;
+    border: 2px solid rgb(50, 188, 210);
+    color: rgb(50, 188, 210);
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    font-weight: 800;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: all 200ms ease-out;
+}
+
+.info-container:nth-child(even) .button {
+    border-color: white;
+    color: white;
+}
+
+div.button:hover, div.button.active {
+    color: white;
+    background-color: rgb(50, 188, 210);
+}
+
+.info-container:nth-child(even) div.button:hover, .info-container:nth-child(even) div.button.active {
+    color: rgb(50, 188, 210);
+    background-color: white;
+}
+
+/*
+
+SCHEDULE TABLE
+
+*/
+
+@media only screen and (max-width: 1000px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    
+}
+
+.schedule table {
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.info-container:nth-child(even) .schedule table {
+    color: white;
+}
+
+.schedule table td {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.schedule table tr:not(:first-child) td:not(:first-child):not(:empty), .schedule table tr:not(:first-child) td:not(.time):not(:empty) {
+    background-color: rgb(50, 188, 210);
+    color:  white;
+    vertical-align: middle;
+    border: 1px solid white;
+}
+
+.info-container:nth-child(even) .schedule table tr:not(:first-child) td:not(:first-child):not(:empty) {
+    background-color: white;
+    color: rgb(83, 172, 165);
+    border-color: rgb(83, 172, 165);
+}
+
+/*.schedule table tr:not(:first-child) td:not(:first-child):not(:empty) p:first-child, .schedule table tr:not(:first-child) td:not(.time):not(:empty) p:first-child {
+    font-weight: 800;
+}*/
+
+/*.schedule table tr:not(:first-child) td:not(:first-child):not(:empty) p:not(:first-child), .schedule table tr:not(:first-child) td:not(.time):not(:empty) p:not(:first-child) {
+    font-size: 10pt;
+}*/
+
+.schedule table .schedule-event-title {
+    font-weight: 800;
+}
+
+.schedule table .schedule-event-time {
+    font-weight: 300;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.schedule table .schedule-event p:not(.schedule-event-title) {
+    font-size: 10pt;
+}
+
+.schedule table .schedule-event .schedule-event-description {
+    /*font-size: 12pt;*/
+    padding-top: 5px;
+}
+
+/*.schedule table tr:nth-child(even) {*/
+.schedule table tr.even {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.schedule table td[rowspan] {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.schedule table td p {
+    padding: 0;
+    margin: 0;
+}
+
+.schedule table td {
+    /*padding: 12px 0 12px 0;*/
+}
+
+/* STROKE */
+
+.schedule table tr:first-child td, .schedule table tr:not(:first-child) td.time {
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+.info-container:nth-child(even) .schedule table tr:first-child td, .info-container:nth-child(even) .schedule table tr:not(:first-child) td.time {
+    text-shadow:
+    -1px -1px 0 #32BCD2,
+    1px -1px 0 #32BCD2,
+    -1px 1px 0 #32BCD2,
+    1px 1px 0 #32BCD2;
+}

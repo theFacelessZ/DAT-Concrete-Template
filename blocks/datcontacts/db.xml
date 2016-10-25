@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btDatContact">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+
+        <field name="Title" type="X2"></field>
+        <field name="Address" type="X2"></field>
+        <field name="PhoneNumber" type="X"></field>
+        <field name="EMail" type="X"></field>
+        <field name="EmbeddedMap" type="X2"></field>
+    </table>
+</schema>

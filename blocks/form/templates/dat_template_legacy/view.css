@@ -1,0 +1,215 @@
+form {
+    padding: 0;
+    margin: 0;
+}
+
+/* CAPTCHA */
+
+.form-group.captcha {
+    margin-top: 5pt;
+}
+
+.form-group.captcha br {
+    display: none;
+}
+
+.form-group.captcha {
+    display: flex;
+    align-items: center;
+}
+
+.captcha .captcha-input {
+    flex-grow: 1;
+    margin-left: 5pt;
+}
+
+.captcha .captcha-input input, .captcha #ccm-captcha-code {
+    height: 60px; /*fixed captcha image size*/
+    margin: 0;
+
+    font-size: 20pt;
+    font-weight: 200;
+    text-align: center;
+}
+
+.captcha .captcha-image>*:not(:first-child) {
+    display: none; /*hide everything except captcha image*/
+}
+
+.captcha .captcha-image>*:first-child {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+/* CAPTCHA HOVER */
+
+.captcha-image .hover-backdrop, .captcha-image:active .hover-backdrop {
+    opacity: 0;
+}
+
+.captcha-image:hover .hover-backdrop {
+    opacity: 1;
+}
+
+.hover-backdrop {
+    pointer-events: none;
+    position: absolute;
+
+    width: 190px;
+    height: 60px;
+    background-color: rgba(0,0,0,.25);
+
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+
+.hover-backdrop>div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    /*background-color: rgb(46, 46, 46);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;*/
+}
+
+
+/* FORM */
+
+form.form-stacked {
+    /*background-color: rgb(50, 188, 210);*/
+    color: white;
+
+    font-family: "Roboto";
+
+    text-align: left;
+    padding: 20pt;
+}
+
+form label {
+    font-weight: 200 !important;
+}
+
+form input, form textarea, select {
+    width: 100%;
+    resize: vertical;
+}
+
+form input:not([type='submit']), form textarea, select {
+    background-color: rgba(0,0,0,0.1);
+    border: none;
+
+    color: white;
+    padding: 8pt;
+
+    margin-bottom: 5pt;
+    margin-top: 5pt;
+
+    -webkit-transition: background 250ms ease-out;
+    -moz-transition: background 250ms ease-out;
+    -ms-transition: background 250ms ease-out;
+    -o-transition: background 250ms ease-out;
+    transition: background 250ms ease-out;
+}
+
+form input:not([type='submit']):focus, form textarea:focus {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.control-label {
+    display: none;
+}
+
+.form-group.field {
+    position: relative;
+}
+
+input[type='submit'] {
+    background-color: rgba(0,0,0,.25);
+    outline: none;
+
+    padding: 10pt;
+    margin-top: 16pt;
+
+    color: white;
+    border: none;
+
+    font-family: "Roboto";
+    text-transform: uppercase;
+
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,.35);
+}
+
+input[type='submit']:active {
+    background-color: rgba(0,0,0,.5);
+}
+
+img.ccm-captcha-image {
+    padding: 0;
+    margin: 0 !important;
+}
+
+.required-field:before {
+    content: '*';
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    -webkit-transform: translateX(-200%) translateY(30%);
+    -moz-transform: translateX(-200%) translateY(30%);
+    -ms-transform: translateX(-200%) translateY(30%);
+    -o-transform: translateX(-200%) translateY(30%);
+    transform: translateX(-200%) translateY(30%);
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+:-moz-placeholder {
+    color: white;
+}
+
+::-moz-placeholder {
+    color: white;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+.alert.alert-success {
+    color: white;
+    background-color: #57C58E !important;
+}
+
+.alert.alert-danger {
+    background-color: #FF4A4A !important;
+}

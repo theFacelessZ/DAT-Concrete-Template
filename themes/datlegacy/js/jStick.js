@@ -111,8 +111,6 @@ var jStick = {
             } else {
                 var newHandler = this.getScrollBindDynamic($dynamicContainer, newObj, $stickTop);
             }
-            /*var newHandler = this.getScrollBind($maxScrollTop, newObj, 0); //TODO: magic num fix (0 - top position)*/
-            /*var newHandler = this.getScrollBindDynamic($dynamicContainer, newObj, 0);*/
             $(window).bind('scroll', newHandler);
             this.scrollBinds.push(newHandler);
         }

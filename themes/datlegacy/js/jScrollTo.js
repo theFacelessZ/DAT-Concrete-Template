@@ -67,11 +67,6 @@ var jScrollHandler = {
 
                 jMenu.activateButton(bID, _bc, _cc);
 
-                /*$('.' + _bc + '.active').each(function() {
-                    $(this).removeClass('active');
-                });
-                $('.' + _bc + '[block-id="' + bID + '"]').addClass('active');*/
-
                 if (this.dynamicOffset) {
                     jScrollHandler.updateScrollTopPercentage();
                 }

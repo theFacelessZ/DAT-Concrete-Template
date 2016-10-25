@@ -19,7 +19,6 @@ var jMenu = {
         }
     },
     set: function($root) {
-        return;
         var w = 0;
 
         $root.find('.b-button').each(function() {

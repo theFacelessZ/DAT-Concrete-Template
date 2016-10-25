@@ -249,32 +249,6 @@ var jSlider = {
         });
     },
     calcDynamicHeight: function(root) {
-        /*var _s = $(root).find('.slide.shown');
-        var _sPS = $(root).attr('jslider-slides');
-
-        var _h = _s.outerHeight();
-
-        if (_sPS == "undefined" || _sPS <= 1) {
-            return _h;
-        }
-
-        var _sArray = $(root).find('.slide');
-        var _c = _sArray.length - 1;
-
-        var _indexOffset = (_sPS - 1) / 2;
-        var _startIndex = _s.index() - _indexOffset;
-        if (_startIndex < 0) {
-            _startIndex = 0;
-            _sPS /= 2;
-        }
-
-
-        for (i = 0; i < _sPS; i++) {
-            var _slideHeight = _sArray.eq(_startIndex + i).outerHeight();
-            if (_slideHeight > _h) {
-                _h = _slideHeight;
-            }
-        }*/
         jDebug.log('Recalculating height...');
         var _h = 0;
         $(root).find('.slide.focused').each(function() {
